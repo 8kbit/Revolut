@@ -23,7 +23,7 @@ public class RESTAccountService {
     @GET
     @Produces(APPLICATION_JSON)
     public Response list(@QueryParam("limit") @DefaultValue("100") Integer limit, @QueryParam("offset") Integer offset) {
-        limit = Math.max(limit, 100);
+        limit = Math.min(limit, 100);
         List<Account> accountList = accountService.list(limit, offset);
         return Response.ok().entity(accountList).build();
     }

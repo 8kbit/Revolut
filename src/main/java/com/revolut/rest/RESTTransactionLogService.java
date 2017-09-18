@@ -24,7 +24,7 @@ public class RESTTransactionLogService {
     @Produces(APPLICATION_JSON)
     public Response list(@QueryParam("accountId") Long accountId, @QueryParam("limit") @DefaultValue("100") Integer limit,
                          @QueryParam("offset") Integer offset) {
-        limit = Math.max(limit, 100);
+        limit = Math.min(limit, 100);
         List<TransactionLog> transactionLogs = transactionLogService.findByFromOrToId(accountId, limit, offset);
         return Response.ok().entity(transactionLogs).build();
     }
