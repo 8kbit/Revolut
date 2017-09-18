@@ -1,7 +1,6 @@
 # Intellij Idea + Gradle
 .idea
 .gradle
-gradle
 
 # Compiled class file
 *.class
