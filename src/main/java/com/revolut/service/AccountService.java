@@ -23,6 +23,7 @@ public class AccountService {
 
     public void save(Account account) {
         accountMapper.save(account);
+        account.setVersion(account.getVersion() + 1);
     }
 
     public void update(Account account) {

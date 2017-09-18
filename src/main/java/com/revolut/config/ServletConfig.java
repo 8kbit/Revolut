@@ -19,8 +19,8 @@ import java.math.BigDecimal;
 public class ServletConfig extends GuiceServletContextListener {
 
     @Override
-    protected Injector getInjector() {
-        Injector injector = Guice.createInjector(new TransferModule(), new MyBatisModule());
+    public Injector getInjector() {
+        Injector injector = Guice.createInjector(new TransferModule(), new MyBatisModule(), new JerseyModule());
 
         migrateDB(injector);
         populateDB(injector);
@@ -28,9 +28,8 @@ public class ServletConfig extends GuiceServletContextListener {
         return injector;
     }
 
-    private void migrateDB(Injector injector) {
+    protected void migrateDB(Injector injector) {
         try {
-            // prepare the test db
             Environment environment = injector.getInstance(SqlSessionFactory.class).getConfiguration().getEnvironment();
             DataSource dataSource = environment.getDataSource();
             ScriptRunner runner = new ScriptRunner(dataSource.getConnection());
@@ -43,15 +42,15 @@ public class ServletConfig extends GuiceServletContextListener {
         }
     }
 
-    private void populateDB(Injector injector) {
+    protected void populateDB(Injector injector) {
         AccountService accountService = injector.getInstance(AccountService.class);
 
         Account mike = new Account("Mike", BigDecimal.valueOf(100));
         Account boris = new Account("Boris", BigDecimal.valueOf(100));
+        Account ivan = new Account("Ivan", BigDecimal.valueOf(100));
 
         accountService.save(mike);
         accountService.save(boris);
-
-        int a = 8;
+        accountService.save(ivan);
     }
 }

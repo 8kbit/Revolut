@@ -1,4 +1,4 @@
-package com.revolut.rest.helper;
+package com.revolut.helper;
 
 /**
  * Created by zaskanov on 18.09.2017.

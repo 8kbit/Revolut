@@ -1,7 +1,6 @@
 package com.revolut.mapper;
 
 import com.revolut.model.Account;
-import com.revolut.model.TransactionLog;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

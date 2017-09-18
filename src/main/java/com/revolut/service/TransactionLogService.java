@@ -13,6 +13,11 @@ public class TransactionLogService {
     @Inject
     private TransactionLogMapper transactionLogMapper;
 
+    public boolean existsByExternalId(Long externalId) {
+        Long count = transactionLogMapper.countByExternalId(externalId);
+        return count != null && count > 0;
+    }
+
     public List<TransactionLog> findByFromOrToId(Long id, Integer limit, Integer offset) {
         return transactionLogMapper.findByFromOrToId(id, limit, offset);
     }
