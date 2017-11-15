@@ -25,13 +25,13 @@ import org.testng.annotations.Test;
 @Test
 public class RestTransferServiceTest {
 
-  Injector injector;
-  AccountService accountService;
-  RestTransferService restTransferService;
-  TransactionLogService transactionLogService;
+  private Injector injector;
+  private AccountService accountService;
+  private RestTransferService restTransferService;
+  private TransactionLogService transactionLogService;
 
-  Account mike;
-  Account boris;
+  private Account mike;
+  private Account boris;
 
   @BeforeClass
   public void before() {

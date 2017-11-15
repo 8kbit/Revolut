@@ -10,7 +10,7 @@ import com.sun.jersey.guice.spi.container.servlet.GuiceContainer;
 /**
  * Created by zaskanov on 09.09.2017.
  */
-public class JerseyModule extends ServletModule {
+class JerseyModule extends ServletModule {
 
   @Override
   protected void configureServlets() {

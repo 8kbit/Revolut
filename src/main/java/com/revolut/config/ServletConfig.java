@@ -43,7 +43,7 @@ public class ServletConfig extends GuiceServletContextListener {
     }
   }
 
-  protected void populateDB(Injector injector) {
+  private void populateDB(Injector injector) {
     AccountService accountService = injector.getInstance(AccountService.class);
 
     Account mike = new Account("Mike", BigDecimal.valueOf(100));

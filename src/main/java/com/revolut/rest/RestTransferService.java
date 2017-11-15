@@ -46,7 +46,7 @@ public class RestTransferService {
       return Response.status(FORBIDDEN).entity(new Msg("amount should be positive")).build();
     }
 
-    //Исключительно для удобства проверки
+    //Исключительно для удобства проверки6
     if (externalId == null) {
       externalId = ThreadLocalRandom.current().nextLong(Long.MAX_VALUE);
     }

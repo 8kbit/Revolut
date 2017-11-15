@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 @Test
 public class AccountServiceTest {
 
-  Injector injector;
+  private Injector injector;
 
   @BeforeClass
   public void before() {

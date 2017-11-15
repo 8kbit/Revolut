@@ -5,7 +5,7 @@ package com.revolut.helper;
  */
 public class Msg {
 
-  public final String msg;
+  private final String msg;
 
   public Msg(String msg) {
     this.msg = msg;
