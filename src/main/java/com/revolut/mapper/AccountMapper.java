@@ -1,19 +1,19 @@
 package com.revolut.mapper;
 
 import com.revolut.model.Account;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Created by zaskanov on 11.09.2017.
  */
 public interface AccountMapper {
-    Account findById(Long id);
 
-    void save(Account account);
+  Account findById(Long id);
 
-    int update(Account account);
+  void save(Account account);
 
-    List<Account> list(@Param("limit") Integer limit, @Param("offset") Integer offset);
+  int update(Account account);
+
+  List<Account> list(@Param("limit") Integer limit, @Param("offset") Integer offset);
 }

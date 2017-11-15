@@ -7,8 +7,8 @@ import org.mybatis.guice.XMLMyBatisModule;
  */
 public class MyBatisModule extends XMLMyBatisModule {
 
-    @Override
-    protected void initialize() {
-        setClassPathResource("mybatis-config.xml");
-    }
+  @Override
+  protected void initialize() {
+    setClassPathResource("mybatis-config.xml");
+  }
 }
