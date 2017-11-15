@@ -19,7 +19,7 @@ import javax.ws.rs.core.Response;
  */
 @Singleton
 @Path("/v1/transactionLog/")
-public class RESTTransactionLogService {
+public class RestTransactionLogService {
 
   @Inject
   private TransactionLogService transactionLogService;

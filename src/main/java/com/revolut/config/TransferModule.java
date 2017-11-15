@@ -1,8 +1,8 @@
 package com.revolut.config;
 
 import com.google.inject.servlet.ServletModule;
-import com.revolut.rest.RESTAccountService;
-import com.revolut.rest.RESTTransferService;
+import com.revolut.rest.RestAccountService;
+import com.revolut.rest.RestTransferService;
 import com.revolut.service.AccountService;
 import com.revolut.service.TransactionLogService;
 
@@ -13,8 +13,8 @@ public class TransferModule extends ServletModule {
 
   @Override
   protected void configureServlets() {
-    bind(RESTTransferService.class);
-    bind(RESTAccountService.class);
+    bind(RestTransferService.class);
+    bind(RestAccountService.class);
     bind(AccountService.class);
     bind(TransactionLogService.class);
   }

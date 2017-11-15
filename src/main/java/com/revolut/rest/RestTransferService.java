@@ -25,7 +25,7 @@ import javax.ws.rs.core.Response;
  */
 @Singleton
 @Path("/v1/transfer/")
-public class RESTTransferService {
+public class RestTransferService {
 
   @Inject
   private AccountService accountService;
